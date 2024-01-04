@@ -13,7 +13,7 @@ const user = {
 }
 
 
-console.log(user.username);
+console.log(user.username)
 console.log(user.getUserDetails());
 
 
@@ -25,10 +25,13 @@ function User(username, logginCount, isLoggedIn) {
     this.logginCount= logginCount
     this.isLoggedIn = isLoggedIn
 
-    // return this
+    // return  this
 }
 
 const userOne = new  User("shubh",2,true)
 const userTwo = new  User("shubh singh",12,false)
 console.log(userOne);
 console.log(userTwo);
+
+
+
