@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,3 +33,39 @@
     
   </script>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Somthing is Cooking</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+  </body>
+  <script>
+    // const sayDate = () => {
+    //   console.log("so Shubh");
+    // }
+    // setInterval(sayDate, 2000);
+    const sayDate = (str) => {
+      console.log(str, "so Shubh");
+    }
+    const intervalId = setInterval(sayDate, 1000, 'hi ');
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervalId)
+        console.log("It just stoped");
+    })
+
+    document.querySelector('#start').addEventListener('click',()=>{
+        setInterval(sayDate, 2000, 'hi ');
+        console.log("It just start");
+    })
+
+    
+  </script>
+</html>
+>>>>>>> 2d019bc0762daf42df6c7cba7f879c969f85453b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,3 +144,150 @@
     );
   </script>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    //attachEvent
+    //jQuery - Onevent leationar
+
+    // document.getElementById('owl').onclick = ()=> alert('owl')
+
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     alert("owl clicked again")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log(e)
+    // },false)
+
+    // type of event, timestamp, defaultPrevented
+    // Target, toElement,  srcElement, currentTarget
+    // clinentX, clinentY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //event prapogetion (have to context 1- event babling (fals), 2- event captering(true) )
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("Click inside the ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("Click on owl")
+    // },false)
+
+    // event capterin
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("Click inside the ul")
+    // },true)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("Click on owl")
+    // },true)
+
+    //stop prapogetion
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("Click inside the ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("Click on owl")
+    //    e.stopPropagation()
+    // },false)
+
+    //preventDefault
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("Click inside the ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("Click on owl")
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('google click');
+    // },false)
+
+    document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e);
+        // console.log(e.target)
+        // console.log(e.target.parentNode);
+
+        // let removeit = e.target.parentNode;
+        //booth are same
+        // removeit.remove();
+        // removeit.parentNode.removeChild(removeit)
+
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>
+>>>>>>> 2d019bc0762daf42df6c7cba7f879c969f85453b
